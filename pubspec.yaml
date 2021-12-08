@@ -1,4 +1,5 @@
 name: bluetooth
+publish_to: none
 description: Bluetooth plugin for Flutter
 version: 0.1.0
 authors:
@@ -12,9 +13,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  convert: "^2.1.1"
+  convert: "^3.0.0"
   protobuf: "^2.0.1"
-  uuid_enhanced: ^3.0.2
+  uuid_enhanced:
+    git:
+      url: https://github.com/marciovalim/dart-uuid.git
+      ref: master
   collection: ^1.14.11
   meta: ^1.1.6
 
