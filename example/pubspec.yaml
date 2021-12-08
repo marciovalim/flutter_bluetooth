@@ -1,6 +1,6 @@
 name: bluetooth_example
 description: Demonstrates how to use the bluetooth plugin.
-publish_to: 'none'
+publish_to: "none"
 
 environment:
   sdk: ">=2.0.0 <3.0.0"
@@ -13,7 +13,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  bluetooth:
+  flutter_blue:
     path: ../
 
 flutter:

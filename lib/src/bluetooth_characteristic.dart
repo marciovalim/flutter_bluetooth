@@ -2,7 +2,7 @@
 // All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-part of bluetooth;
+part of flutter_blue;
 
 class BluetoothCharacteristicIdentifier {
   final Uuid uuid;
@@ -18,7 +18,6 @@ class BluetoothCharacteristicIdentifier {
           protos.BluetoothCharacteristicIdentifier p) =>
       BluetoothCharacteristicIdentifier(Uuid.fromString(p.uuid), p.instanceId);
 
-
   @override
   String toString() {
     return """"[UUID "$uuid", InstanceId "$instanceId"]""";
@@ -27,8 +26,7 @@ class BluetoothCharacteristicIdentifier {
   protos.BluetoothCharacteristicIdentifier get toProto {
     return protos.BluetoothCharacteristicIdentifier.create()
       ..uuid = this.uuid.toString()
-      ..instanceId = this.instanceId
-    ;
+      ..instanceId = this.instanceId;
   }
 
   static int _calcHashCode(Uuid uuid, int instanceId) {

@@ -56,7 +56,7 @@ import io.flutter.plugin.common.PluginRegistry.RequestPermissionsResultListener;
  */
 public class FlutterBluePlugin implements MethodCallHandler, RequestPermissionsResultListener  {
     private static final String TAG = "FlutterBluePlugin";
-    private static final String NAMESPACE = "plugins.pauldemarco.com/bluetooth";
+    private static final String NAMESPACE = "plugins.pauldemarco.com/flutter_blue";
     private static final int REQUEST_COARSE_LOCATION_PERMISSIONS = 1452;
     static final private UUID CCCD_ID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
     private final Registrar registrar;
