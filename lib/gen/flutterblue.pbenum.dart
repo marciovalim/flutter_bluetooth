@@ -28,7 +28,7 @@ class BluetoothState_State extends $pb.ProtobufEnum {
   ];
 
   static final Map<int, BluetoothState_State> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static BluetoothState_State valueOf(int value) => _byValue[value];
+  static BluetoothState_State? valueOf(int value) => _byValue[value];
 
   const BluetoothState_State._(int v, String n) : super(v, n);
 }
@@ -47,7 +47,7 @@ class BluetoothDevice_Type extends $pb.ProtobufEnum {
   ];
 
   static final Map<int, BluetoothDevice_Type> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static BluetoothDevice_Type valueOf(int value) => _byValue[value];
+  static BluetoothDevice_Type? valueOf(int value) => _byValue[value];
 
   const BluetoothDevice_Type._(int v, String n) : super(v, n);
 }
@@ -62,7 +62,7 @@ class WriteCharacteristicRequest_WriteType extends $pb.ProtobufEnum {
   ];
 
   static final Map<int, WriteCharacteristicRequest_WriteType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static WriteCharacteristicRequest_WriteType valueOf(int value) => _byValue[value];
+  static WriteCharacteristicRequest_WriteType? valueOf(int value) => _byValue[value];
 
   const WriteCharacteristicRequest_WriteType._(int v, String n) : super(v, n);
 }
@@ -81,7 +81,7 @@ class DeviceStateResponse_BluetoothDeviceState extends $pb.ProtobufEnum {
   ];
 
   static final Map<int, DeviceStateResponse_BluetoothDeviceState> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static DeviceStateResponse_BluetoothDeviceState valueOf(int value) => _byValue[value];
+  static DeviceStateResponse_BluetoothDeviceState? valueOf(int value) => _byValue[value];
 
   const DeviceStateResponse_BluetoothDeviceState._(int v, String n) : super(v, n);
 }

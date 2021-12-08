@@ -65,13 +65,13 @@ class FlutterBlue {
     ScanMode scanMode = ScanMode.lowLatency,
     List<Uuid> withServices = const [],
     List<Uuid> withDevices = const [],
-    Duration timeout,
+    Duration? timeout,
   }) async* {
     var settings = protos.ScanSettings.create()
       ..androidScanMode = scanMode.value
       ..serviceUuids.addAll(withServices.map((g) => g.toString()).toList());
-    StreamSubscription subscription;
-    StreamController controller;
+    late StreamSubscription subscription;
+    late StreamController controller;
     controller = new StreamController(
       onListen: () {
         if (timeout != null) {
@@ -106,15 +106,15 @@ class FlutterBlue {
   /// To cancel connection to device, simply cancel() the stream subscription
   Stream<BluetoothDeviceState> connect(
     BluetoothDevice device, {
-    Duration timeout,
+    Duration? timeout,
     bool autoConnect = true,
   }) async* {
     var request = protos.ConnectRequest.create()
       ..remoteId = device.id.toString()
       ..androidAutoConnect = autoConnect;
     var connected = false;
-    StreamSubscription subscription;
-    StreamController controller;
+    late StreamSubscription subscription;
+    late StreamController controller;
     controller = new StreamController<BluetoothDeviceState>(
       onListen: () {
         if (timeout != null) {
@@ -142,7 +142,7 @@ class FlutterBlue {
       onDone: controller.close,
     );
 
-    yield* controller.stream;
+    yield* controller.stream as Stream<BluetoothDeviceState>;
   }
 
   /// Cancels connection to the Bluetooth Device
@@ -220,18 +220,18 @@ class ScanResult {
             new AdvertisementData.fromProto(p.advertisementData),
         rssi = p.rssi;
 
-  final BluetoothDevice device;
-  final AdvertisementData advertisementData;
-  final int rssi;
+  final BluetoothDevice? device;
+  final AdvertisementData? advertisementData;
+  final int? rssi;
 }
 
 class AdvertisementData {
-  final String localName;
-  final int txPowerLevel;
-  final bool connectable;
-  final Map<int, List<int>> manufacturerData;
-  final Map<String, List<int>> serviceData;
-  final List<String> serviceUuids;
+  final String? localName;
+  final int? txPowerLevel;
+  final bool? connectable;
+  final Map<int, List<int>>? manufacturerData;
+  final Map<String, List<int>>? serviceData;
+  final List<String>? serviceUuids;
 
   AdvertisementData(
       {this.localName,

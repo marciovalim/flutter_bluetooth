@@ -9,7 +9,6 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 import 'package:uuid_enhanced/uuid.dart';
 import 'package:flutter/services.dart';
-import 'package:meta/meta.dart';
 
 import 'gen/flutterblue.pb.dart' as protos;
 

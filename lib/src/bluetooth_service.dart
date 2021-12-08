@@ -12,11 +12,11 @@ class BluetoothService {
   final List<BluetoothService> includedServices;
 
   BluetoothService(
-      {@required this.uuid,
-      @required this.deviceId,
-      @required this.isPrimary,
-      @required this.characteristics,
-      @required this.includedServices});
+      {required this.uuid,
+      required this.deviceId,
+      required this.isPrimary,
+      required this.characteristics,
+      required this.includedServices});
 
   BluetoothService.fromProto(protos.BluetoothService p)
       : uuid = Uuid.fromString(p.uuid),

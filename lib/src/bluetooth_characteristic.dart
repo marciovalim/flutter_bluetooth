@@ -45,7 +45,7 @@ class BluetoothCharacteristicIdentifier {
 class BluetoothCharacteristic {
   final BluetoothCharacteristicIdentifier id;
   final Uuid serviceUuid; // The service that this characteristic belongs to.
-  final Uuid
+  final Uuid?
       secondaryServiceUuid; // The nested service that this characteristic belongs to.
   final CharacteristicProperties properties;
   final List<BluetoothDescriptor> descriptors;
@@ -53,20 +53,20 @@ class BluetoothCharacteristic {
     try {
       var cccd =
           descriptors.singleWhere((d) => d.uuid == BluetoothDescriptor.CCCD);
-      return ((cccd.value[0] & 0x01) > 0 || (cccd.value[0] & 0x02) > 0);
+      return ((cccd.value![0] & 0x01) > 0 || (cccd.value![0] & 0x02) > 0);
     } catch (e) {
       return false;
     }
   }
 
-  List<int> value;
+  List<int>? value;
 
   BluetoothCharacteristic(
-      {@required this.id,
-      @required this.serviceUuid,
+      {required this.id,
+      required this.serviceUuid,
       this.secondaryServiceUuid,
-      @required this.descriptors,
-      @required this.properties});
+      required this.descriptors,
+      required this.properties});
 
   BluetoothCharacteristic.fromProto(protos.BluetoothCharacteristic p)
       : id = BluetoothCharacteristicIdentifier.fromProto(p.identifier),

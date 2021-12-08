@@ -6,11 +6,11 @@ part of flutter_blue;
 
 class BluetoothDevice {
   final DeviceIdentifier id;
-  final String name;
+  final String? name;
   final BluetoothDeviceType type;
 
   BluetoothDevice(
-      {@required this.id, this.name, this.type = BluetoothDeviceType.unknown});
+      {required this.id, this.name, this.type = BluetoothDeviceType.unknown});
 
   BluetoothDevice.fromProto(protos.BluetoothDevice p)
       : id = new DeviceIdentifier(p.remoteId),
@@ -107,7 +107,7 @@ class BluetoothDevice {
       ..characteristicId = characteristic.id.toProto
       ..serviceUuid = characteristic.serviceUuid.toString()
       ..writeType =
-          protos.WriteCharacteristicRequest_WriteType.valueOf(type.index)
+          protos.WriteCharacteristicRequest_WriteType.valueOf(type.index)!
       ..value = value;
 
     var result = await FlutterBlue.instance._channel
@@ -131,8 +131,9 @@ class BluetoothDevice {
         .then((success) => (!success)
             ? throw new Exception('Failed to write the characteristic')
             : null)
-        .then((_) => characteristic.value = value)
-        .then((_) => null);
+        .then(
+            ((_) => characteristic.value = value) as FutureOr<_> Function(Null))
+        .then(((_) => null) as FutureOr<Null> Function(dynamic));
   }
 
   /// Writes the value of a descriptor
@@ -162,8 +163,8 @@ class BluetoothDevice {
         .then((success) => (!success)
             ? throw new Exception('Failed to write the descriptor')
             : null)
-        .then((_) => descriptor.value = value)
-        .then((_) => null);
+        .then(((_) => descriptor.value = value) as FutureOr<_> Function(Null))
+        .then(((_) => null) as FutureOr<Null> Function(dynamic));
   }
 
   /// Sets notifications or indications for the value of a specified characteristic
@@ -197,7 +198,7 @@ class BluetoothDevice {
 
   /// Notifies when the characteristic's value has changed.
   /// setNotification() should be run first to enable them on the peripheral
-  Stream<List<int>> onValueChanged(BluetoothCharacteristic characteristic) {
+  Stream<List<int>?> onValueChanged(BluetoothCharacteristic characteristic) {
     return FlutterBlue.instance._methodStream
         .where((m) => m.method == "OnValueChanged")
         .map((m) => m.arguments)

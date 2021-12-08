@@ -5,7 +5,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:bluetooth/bluetooth.dart';
+import 'package:flutter_blue/bluetooth.dart';
 import './widgets.dart';
 
 void main() {
@@ -38,8 +38,10 @@ class _FlutterBlueAppState extends State<FlutterBlueApp> {
   bool get isConnected => (device != null);
   StreamSubscription deviceConnection;
   StreamSubscription deviceStateSubscription;
+  // ignore: deprecated_member_use
   List<BluetoothService> services = new List();
-  Map<BluetoothCharacteristicIdentifier, StreamSubscription> valueChangedSubscriptions = {};
+  Map<BluetoothCharacteristicIdentifier, StreamSubscription>
+      valueChangedSubscriptions = {};
   BluetoothDeviceState deviceState = BluetoothDeviceState.disconnected;
 
   @override
@@ -224,28 +226,27 @@ class _FlutterBlueAppState extends State<FlutterBlueApp> {
     return services
         .map(
           (s) => new ServiceTile(
-                service: s,
-                characteristicTiles: s.characteristics
-                    .map(
-                      (c) => new CharacteristicTile(
-                            characteristic: c,
-                            onReadPressed: () => _readCharacteristic(c),
-                            onWritePressed: () => _writeCharacteristic(c),
-                            onNotificationPressed: () => _setNotification(c),
-                            descriptorTiles: c.descriptors
-                                .map(
-                                  (d) => new DescriptorTile(
-                                        descriptor: d,
-                                        onReadPressed: () => _readDescriptor(d),
-                                        onWritePressed: () =>
-                                            _writeDescriptor(d),
-                                      ),
-                                )
-                                .toList(),
+            service: s,
+            characteristicTiles: s.characteristics
+                .map(
+                  (c) => new CharacteristicTile(
+                    characteristic: c,
+                    onReadPressed: () => _readCharacteristic(c),
+                    onWritePressed: () => _writeCharacteristic(c),
+                    onNotificationPressed: () => _setNotification(c),
+                    descriptorTiles: c.descriptors
+                        .map(
+                          (d) => new DescriptorTile(
+                            descriptor: d,
+                            onReadPressed: () => _readDescriptor(d),
+                            onWritePressed: () => _writeDescriptor(d),
                           ),
-                    )
-                    .toList(),
-              ),
+                        )
+                        .toList(),
+                  ),
+                )
+                .toList(),
+          ),
         )
         .toList();
   }
@@ -267,11 +268,11 @@ class _FlutterBlueAppState extends State<FlutterBlueApp> {
       child: new ListTile(
         title: new Text(
           'Bluetooth adapter is ${state.toString().substring(15)}',
-          style: Theme.of(context).primaryTextTheme.subhead,
+          // style: Theme.of(context).primaryTextTheme.subhead,
         ),
         trailing: new Icon(
           Icons.error,
-          color: Theme.of(context).primaryTextTheme.subhead.color,
+          // color: Theme.of(context).primaryTextTheme.subhead.color,
         ),
       ),
     );
@@ -297,6 +298,7 @@ class _FlutterBlueAppState extends State<FlutterBlueApp> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: deprecated_member_use
     var tiles = new List<Widget>();
     if (state != BluetoothState.on) {
       tiles.add(_buildAlertTile());

@@ -23,13 +23,13 @@ class Int32Value extends $pb.GeneratedMessage {
   Int32Value.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   Int32Value.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   Int32Value clone() => new Int32Value()..mergeFromMessage(this);
-  Int32Value copyWith(void Function(Int32Value) updates) => super.copyWith((message) => updates(message as Int32Value));
+  Int32Value copyWith(void Function(Int32Value) updates) => super.copyWith((message) => updates(message as Int32Value)) as Int32Value;
   $pb.BuilderInfo get info_ => _i;
   static Int32Value create() => new Int32Value();
   Int32Value createEmptyInstance() => create();
   static $pb.PbList<Int32Value> createRepeated() => new $pb.PbList<Int32Value>();
   static Int32Value getDefault() => _defaultInstance ??= create()..freeze();
-  static Int32Value _defaultInstance;
+  static Int32Value? _defaultInstance;
 
   int get value => $_get(0, 0);
   set value(int v) { $_setSignedInt32(0, v); }
@@ -47,13 +47,13 @@ class BluetoothState extends $pb.GeneratedMessage {
   BluetoothState.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   BluetoothState.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BluetoothState clone() => new BluetoothState()..mergeFromMessage(this);
-  BluetoothState copyWith(void Function(BluetoothState) updates) => super.copyWith((message) => updates(message as BluetoothState));
+  BluetoothState copyWith(void Function(BluetoothState) updates) => super.copyWith((message) => updates(message as BluetoothState)) as BluetoothState;
   $pb.BuilderInfo get info_ => _i;
   static BluetoothState create() => new BluetoothState();
   BluetoothState createEmptyInstance() => create();
   static $pb.PbList<BluetoothState> createRepeated() => new $pb.PbList<BluetoothState>();
   static BluetoothState getDefault() => _defaultInstance ??= create()..freeze();
-  static BluetoothState _defaultInstance;
+  static BluetoothState? _defaultInstance;
 
   BluetoothState_State get state => $_getN(0);
   set state(BluetoothState_State v) { setField(1, v); }
@@ -76,13 +76,13 @@ class AdvertisementData extends $pb.GeneratedMessage {
   AdvertisementData.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   AdvertisementData.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   AdvertisementData clone() => new AdvertisementData()..mergeFromMessage(this);
-  AdvertisementData copyWith(void Function(AdvertisementData) updates) => super.copyWith((message) => updates(message as AdvertisementData));
+  AdvertisementData copyWith(void Function(AdvertisementData) updates) => super.copyWith((message) => updates(message as AdvertisementData)) as AdvertisementData;
   $pb.BuilderInfo get info_ => _i;
   static AdvertisementData create() => new AdvertisementData();
   AdvertisementData createEmptyInstance() => create();
   static $pb.PbList<AdvertisementData> createRepeated() => new $pb.PbList<AdvertisementData>();
   static AdvertisementData getDefault() => _defaultInstance ??= create()..freeze();
-  static AdvertisementData _defaultInstance;
+  static AdvertisementData? _defaultInstance;
 
   String get localName => $_getS(0, '');
   set localName(String v) { $_setString(0, v); }
@@ -117,13 +117,13 @@ class ScanSettings extends $pb.GeneratedMessage {
   ScanSettings.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   ScanSettings.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ScanSettings clone() => new ScanSettings()..mergeFromMessage(this);
-  ScanSettings copyWith(void Function(ScanSettings) updates) => super.copyWith((message) => updates(message as ScanSettings));
+  ScanSettings copyWith(void Function(ScanSettings) updates) => super.copyWith((message) => updates(message as ScanSettings)) as ScanSettings;
   $pb.BuilderInfo get info_ => _i;
   static ScanSettings create() => new ScanSettings();
   ScanSettings createEmptyInstance() => create();
   static $pb.PbList<ScanSettings> createRepeated() => new $pb.PbList<ScanSettings>();
   static ScanSettings getDefault() => _defaultInstance ??= create()..freeze();
-  static ScanSettings _defaultInstance;
+  static ScanSettings? _defaultInstance;
 
   int get androidScanMode => $_get(0, 0);
   set androidScanMode(int v) { $_setSignedInt32(0, v); }
@@ -145,13 +145,13 @@ class ScanResult extends $pb.GeneratedMessage {
   ScanResult.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   ScanResult.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ScanResult clone() => new ScanResult()..mergeFromMessage(this);
-  ScanResult copyWith(void Function(ScanResult) updates) => super.copyWith((message) => updates(message as ScanResult));
+  ScanResult copyWith(void Function(ScanResult) updates) => super.copyWith((message) => updates(message as ScanResult)) as ScanResult;
   $pb.BuilderInfo get info_ => _i;
   static ScanResult create() => new ScanResult();
   ScanResult createEmptyInstance() => create();
   static $pb.PbList<ScanResult> createRepeated() => new $pb.PbList<ScanResult>();
   static ScanResult getDefault() => _defaultInstance ??= create()..freeze();
-  static ScanResult _defaultInstance;
+  static ScanResult? _defaultInstance;
 
   BluetoothDevice get device => $_getN(0);
   set device(BluetoothDevice v) { setField(1, v); }
@@ -180,13 +180,13 @@ class ConnectRequest extends $pb.GeneratedMessage {
   ConnectRequest.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   ConnectRequest.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ConnectRequest clone() => new ConnectRequest()..mergeFromMessage(this);
-  ConnectRequest copyWith(void Function(ConnectRequest) updates) => super.copyWith((message) => updates(message as ConnectRequest));
+  ConnectRequest copyWith(void Function(ConnectRequest) updates) => super.copyWith((message) => updates(message as ConnectRequest)) as ConnectRequest;
   $pb.BuilderInfo get info_ => _i;
   static ConnectRequest create() => new ConnectRequest();
   ConnectRequest createEmptyInstance() => create();
   static $pb.PbList<ConnectRequest> createRepeated() => new $pb.PbList<ConnectRequest>();
   static ConnectRequest getDefault() => _defaultInstance ??= create()..freeze();
-  static ConnectRequest _defaultInstance;
+  static ConnectRequest? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -211,13 +211,13 @@ class BluetoothDevice extends $pb.GeneratedMessage {
   BluetoothDevice.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   BluetoothDevice.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BluetoothDevice clone() => new BluetoothDevice()..mergeFromMessage(this);
-  BluetoothDevice copyWith(void Function(BluetoothDevice) updates) => super.copyWith((message) => updates(message as BluetoothDevice));
+  BluetoothDevice copyWith(void Function(BluetoothDevice) updates) => super.copyWith((message) => updates(message as BluetoothDevice)) as BluetoothDevice;
   $pb.BuilderInfo get info_ => _i;
   static BluetoothDevice create() => new BluetoothDevice();
   BluetoothDevice createEmptyInstance() => create();
   static $pb.PbList<BluetoothDevice> createRepeated() => new $pb.PbList<BluetoothDevice>();
   static BluetoothDevice getDefault() => _defaultInstance ??= create()..freeze();
-  static BluetoothDevice _defaultInstance;
+  static BluetoothDevice? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -249,13 +249,13 @@ class BluetoothService extends $pb.GeneratedMessage {
   BluetoothService.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   BluetoothService.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BluetoothService clone() => new BluetoothService()..mergeFromMessage(this);
-  BluetoothService copyWith(void Function(BluetoothService) updates) => super.copyWith((message) => updates(message as BluetoothService));
+  BluetoothService copyWith(void Function(BluetoothService) updates) => super.copyWith((message) => updates(message as BluetoothService)) as BluetoothService;
   $pb.BuilderInfo get info_ => _i;
   static BluetoothService create() => new BluetoothService();
   BluetoothService createEmptyInstance() => create();
   static $pb.PbList<BluetoothService> createRepeated() => new $pb.PbList<BluetoothService>();
   static BluetoothService getDefault() => _defaultInstance ??= create()..freeze();
-  static BluetoothService _defaultInstance;
+  static BluetoothService? _defaultInstance;
 
   String get uuid => $_getS(0, '');
   set uuid(String v) { $_setString(0, v); }
@@ -288,13 +288,13 @@ class BluetoothCharacteristicIdentifier extends $pb.GeneratedMessage {
   BluetoothCharacteristicIdentifier.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   BluetoothCharacteristicIdentifier.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BluetoothCharacteristicIdentifier clone() => new BluetoothCharacteristicIdentifier()..mergeFromMessage(this);
-  BluetoothCharacteristicIdentifier copyWith(void Function(BluetoothCharacteristicIdentifier) updates) => super.copyWith((message) => updates(message as BluetoothCharacteristicIdentifier));
+  BluetoothCharacteristicIdentifier copyWith(void Function(BluetoothCharacteristicIdentifier) updates) => super.copyWith((message) => updates(message as BluetoothCharacteristicIdentifier)) as BluetoothCharacteristicIdentifier;
   $pb.BuilderInfo get info_ => _i;
   static BluetoothCharacteristicIdentifier create() => new BluetoothCharacteristicIdentifier();
   BluetoothCharacteristicIdentifier createEmptyInstance() => create();
   static $pb.PbList<BluetoothCharacteristicIdentifier> createRepeated() => new $pb.PbList<BluetoothCharacteristicIdentifier>();
   static BluetoothCharacteristicIdentifier getDefault() => _defaultInstance ??= create()..freeze();
-  static BluetoothCharacteristicIdentifier _defaultInstance;
+  static BluetoothCharacteristicIdentifier? _defaultInstance;
 
   String get uuid => $_getS(0, '');
   set uuid(String v) { $_setString(0, v); }
@@ -322,13 +322,13 @@ class BluetoothCharacteristic extends $pb.GeneratedMessage {
   BluetoothCharacteristic.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   BluetoothCharacteristic.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BluetoothCharacteristic clone() => new BluetoothCharacteristic()..mergeFromMessage(this);
-  BluetoothCharacteristic copyWith(void Function(BluetoothCharacteristic) updates) => super.copyWith((message) => updates(message as BluetoothCharacteristic));
+  BluetoothCharacteristic copyWith(void Function(BluetoothCharacteristic) updates) => super.copyWith((message) => updates(message as BluetoothCharacteristic)) as BluetoothCharacteristic;
   $pb.BuilderInfo get info_ => _i;
   static BluetoothCharacteristic create() => new BluetoothCharacteristic();
   BluetoothCharacteristic createEmptyInstance() => create();
   static $pb.PbList<BluetoothCharacteristic> createRepeated() => new $pb.PbList<BluetoothCharacteristic>();
   static BluetoothCharacteristic getDefault() => _defaultInstance ??= create()..freeze();
-  static BluetoothCharacteristic _defaultInstance;
+  static BluetoothCharacteristic? _defaultInstance;
 
   BluetoothCharacteristicIdentifier get identifier => $_getN(0);
   set identifier(BluetoothCharacteristicIdentifier v) { setField(1, v); }
@@ -371,13 +371,13 @@ class BluetoothDescriptor extends $pb.GeneratedMessage {
   BluetoothDescriptor.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   BluetoothDescriptor.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   BluetoothDescriptor clone() => new BluetoothDescriptor()..mergeFromMessage(this);
-  BluetoothDescriptor copyWith(void Function(BluetoothDescriptor) updates) => super.copyWith((message) => updates(message as BluetoothDescriptor));
+  BluetoothDescriptor copyWith(void Function(BluetoothDescriptor) updates) => super.copyWith((message) => updates(message as BluetoothDescriptor)) as BluetoothDescriptor;
   $pb.BuilderInfo get info_ => _i;
   static BluetoothDescriptor create() => new BluetoothDescriptor();
   BluetoothDescriptor createEmptyInstance() => create();
   static $pb.PbList<BluetoothDescriptor> createRepeated() => new $pb.PbList<BluetoothDescriptor>();
   static BluetoothDescriptor getDefault() => _defaultInstance ??= create()..freeze();
-  static BluetoothDescriptor _defaultInstance;
+  static BluetoothDescriptor? _defaultInstance;
 
   String get uuid => $_getS(0, '');
   set uuid(String v) { $_setString(0, v); }
@@ -419,13 +419,13 @@ class CharacteristicProperties extends $pb.GeneratedMessage {
   CharacteristicProperties.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   CharacteristicProperties.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   CharacteristicProperties clone() => new CharacteristicProperties()..mergeFromMessage(this);
-  CharacteristicProperties copyWith(void Function(CharacteristicProperties) updates) => super.copyWith((message) => updates(message as CharacteristicProperties));
+  CharacteristicProperties copyWith(void Function(CharacteristicProperties) updates) => super.copyWith((message) => updates(message as CharacteristicProperties)) as CharacteristicProperties;
   $pb.BuilderInfo get info_ => _i;
   static CharacteristicProperties create() => new CharacteristicProperties();
   CharacteristicProperties createEmptyInstance() => create();
   static $pb.PbList<CharacteristicProperties> createRepeated() => new $pb.PbList<CharacteristicProperties>();
   static CharacteristicProperties getDefault() => _defaultInstance ??= create()..freeze();
-  static CharacteristicProperties _defaultInstance;
+  static CharacteristicProperties? _defaultInstance;
 
   bool get broadcast => $_get(0, false);
   set broadcast(bool v) { $_setBool(0, v); }
@@ -489,13 +489,13 @@ class DiscoverServicesResult extends $pb.GeneratedMessage {
   DiscoverServicesResult.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   DiscoverServicesResult.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DiscoverServicesResult clone() => new DiscoverServicesResult()..mergeFromMessage(this);
-  DiscoverServicesResult copyWith(void Function(DiscoverServicesResult) updates) => super.copyWith((message) => updates(message as DiscoverServicesResult));
+  DiscoverServicesResult copyWith(void Function(DiscoverServicesResult) updates) => super.copyWith((message) => updates(message as DiscoverServicesResult)) as DiscoverServicesResult;
   $pb.BuilderInfo get info_ => _i;
   static DiscoverServicesResult create() => new DiscoverServicesResult();
   DiscoverServicesResult createEmptyInstance() => create();
   static $pb.PbList<DiscoverServicesResult> createRepeated() => new $pb.PbList<DiscoverServicesResult>();
   static DiscoverServicesResult getDefault() => _defaultInstance ??= create()..freeze();
-  static DiscoverServicesResult _defaultInstance;
+  static DiscoverServicesResult? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -518,13 +518,13 @@ class ReadCharacteristicRequest extends $pb.GeneratedMessage {
   ReadCharacteristicRequest.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   ReadCharacteristicRequest.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ReadCharacteristicRequest clone() => new ReadCharacteristicRequest()..mergeFromMessage(this);
-  ReadCharacteristicRequest copyWith(void Function(ReadCharacteristicRequest) updates) => super.copyWith((message) => updates(message as ReadCharacteristicRequest));
+  ReadCharacteristicRequest copyWith(void Function(ReadCharacteristicRequest) updates) => super.copyWith((message) => updates(message as ReadCharacteristicRequest)) as ReadCharacteristicRequest;
   $pb.BuilderInfo get info_ => _i;
   static ReadCharacteristicRequest create() => new ReadCharacteristicRequest();
   ReadCharacteristicRequest createEmptyInstance() => create();
   static $pb.PbList<ReadCharacteristicRequest> createRepeated() => new $pb.PbList<ReadCharacteristicRequest>();
   static ReadCharacteristicRequest getDefault() => _defaultInstance ??= create()..freeze();
-  static ReadCharacteristicRequest _defaultInstance;
+  static ReadCharacteristicRequest? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -558,13 +558,13 @@ class ReadCharacteristicResponse extends $pb.GeneratedMessage {
   ReadCharacteristicResponse.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   ReadCharacteristicResponse.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ReadCharacteristicResponse clone() => new ReadCharacteristicResponse()..mergeFromMessage(this);
-  ReadCharacteristicResponse copyWith(void Function(ReadCharacteristicResponse) updates) => super.copyWith((message) => updates(message as ReadCharacteristicResponse));
+  ReadCharacteristicResponse copyWith(void Function(ReadCharacteristicResponse) updates) => super.copyWith((message) => updates(message as ReadCharacteristicResponse)) as ReadCharacteristicResponse;
   $pb.BuilderInfo get info_ => _i;
   static ReadCharacteristicResponse create() => new ReadCharacteristicResponse();
   ReadCharacteristicResponse createEmptyInstance() => create();
   static $pb.PbList<ReadCharacteristicResponse> createRepeated() => new $pb.PbList<ReadCharacteristicResponse>();
   static ReadCharacteristicResponse getDefault() => _defaultInstance ??= create()..freeze();
-  static ReadCharacteristicResponse _defaultInstance;
+  static ReadCharacteristicResponse? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -591,13 +591,13 @@ class ReadDescriptorRequest extends $pb.GeneratedMessage {
   ReadDescriptorRequest.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   ReadDescriptorRequest.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ReadDescriptorRequest clone() => new ReadDescriptorRequest()..mergeFromMessage(this);
-  ReadDescriptorRequest copyWith(void Function(ReadDescriptorRequest) updates) => super.copyWith((message) => updates(message as ReadDescriptorRequest));
+  ReadDescriptorRequest copyWith(void Function(ReadDescriptorRequest) updates) => super.copyWith((message) => updates(message as ReadDescriptorRequest)) as ReadDescriptorRequest;
   $pb.BuilderInfo get info_ => _i;
   static ReadDescriptorRequest create() => new ReadDescriptorRequest();
   ReadDescriptorRequest createEmptyInstance() => create();
   static $pb.PbList<ReadDescriptorRequest> createRepeated() => new $pb.PbList<ReadDescriptorRequest>();
   static ReadDescriptorRequest getDefault() => _defaultInstance ??= create()..freeze();
-  static ReadDescriptorRequest _defaultInstance;
+  static ReadDescriptorRequest? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -636,13 +636,13 @@ class ReadDescriptorResponse extends $pb.GeneratedMessage {
   ReadDescriptorResponse.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   ReadDescriptorResponse.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   ReadDescriptorResponse clone() => new ReadDescriptorResponse()..mergeFromMessage(this);
-  ReadDescriptorResponse copyWith(void Function(ReadDescriptorResponse) updates) => super.copyWith((message) => updates(message as ReadDescriptorResponse));
+  ReadDescriptorResponse copyWith(void Function(ReadDescriptorResponse) updates) => super.copyWith((message) => updates(message as ReadDescriptorResponse)) as ReadDescriptorResponse;
   $pb.BuilderInfo get info_ => _i;
   static ReadDescriptorResponse create() => new ReadDescriptorResponse();
   ReadDescriptorResponse createEmptyInstance() => create();
   static $pb.PbList<ReadDescriptorResponse> createRepeated() => new $pb.PbList<ReadDescriptorResponse>();
   static ReadDescriptorResponse getDefault() => _defaultInstance ??= create()..freeze();
-  static ReadDescriptorResponse _defaultInstance;
+  static ReadDescriptorResponse? _defaultInstance;
 
   ReadDescriptorRequest get request => $_getN(0);
   set request(ReadDescriptorRequest v) { setField(1, v); }
@@ -670,13 +670,13 @@ class WriteCharacteristicRequest extends $pb.GeneratedMessage {
   WriteCharacteristicRequest.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   WriteCharacteristicRequest.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   WriteCharacteristicRequest clone() => new WriteCharacteristicRequest()..mergeFromMessage(this);
-  WriteCharacteristicRequest copyWith(void Function(WriteCharacteristicRequest) updates) => super.copyWith((message) => updates(message as WriteCharacteristicRequest));
+  WriteCharacteristicRequest copyWith(void Function(WriteCharacteristicRequest) updates) => super.copyWith((message) => updates(message as WriteCharacteristicRequest)) as WriteCharacteristicRequest;
   $pb.BuilderInfo get info_ => _i;
   static WriteCharacteristicRequest create() => new WriteCharacteristicRequest();
   WriteCharacteristicRequest createEmptyInstance() => create();
   static $pb.PbList<WriteCharacteristicRequest> createRepeated() => new $pb.PbList<WriteCharacteristicRequest>();
   static WriteCharacteristicRequest getDefault() => _defaultInstance ??= create()..freeze();
-  static WriteCharacteristicRequest _defaultInstance;
+  static WriteCharacteristicRequest? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -720,13 +720,13 @@ class WriteCharacteristicResponse extends $pb.GeneratedMessage {
   WriteCharacteristicResponse.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   WriteCharacteristicResponse.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   WriteCharacteristicResponse clone() => new WriteCharacteristicResponse()..mergeFromMessage(this);
-  WriteCharacteristicResponse copyWith(void Function(WriteCharacteristicResponse) updates) => super.copyWith((message) => updates(message as WriteCharacteristicResponse));
+  WriteCharacteristicResponse copyWith(void Function(WriteCharacteristicResponse) updates) => super.copyWith((message) => updates(message as WriteCharacteristicResponse)) as WriteCharacteristicResponse;
   $pb.BuilderInfo get info_ => _i;
   static WriteCharacteristicResponse create() => new WriteCharacteristicResponse();
   WriteCharacteristicResponse createEmptyInstance() => create();
   static $pb.PbList<WriteCharacteristicResponse> createRepeated() => new $pb.PbList<WriteCharacteristicResponse>();
   static WriteCharacteristicResponse getDefault() => _defaultInstance ??= create()..freeze();
-  static WriteCharacteristicResponse _defaultInstance;
+  static WriteCharacteristicResponse? _defaultInstance;
 
   WriteCharacteristicRequest get request => $_getN(0);
   set request(WriteCharacteristicRequest v) { setField(1, v); }
@@ -754,13 +754,13 @@ class WriteDescriptorRequest extends $pb.GeneratedMessage {
   WriteDescriptorRequest.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   WriteDescriptorRequest.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   WriteDescriptorRequest clone() => new WriteDescriptorRequest()..mergeFromMessage(this);
-  WriteDescriptorRequest copyWith(void Function(WriteDescriptorRequest) updates) => super.copyWith((message) => updates(message as WriteDescriptorRequest));
+  WriteDescriptorRequest copyWith(void Function(WriteDescriptorRequest) updates) => super.copyWith((message) => updates(message as WriteDescriptorRequest)) as WriteDescriptorRequest;
   $pb.BuilderInfo get info_ => _i;
   static WriteDescriptorRequest create() => new WriteDescriptorRequest();
   WriteDescriptorRequest createEmptyInstance() => create();
   static $pb.PbList<WriteDescriptorRequest> createRepeated() => new $pb.PbList<WriteDescriptorRequest>();
   static WriteDescriptorRequest getDefault() => _defaultInstance ??= create()..freeze();
-  static WriteDescriptorRequest _defaultInstance;
+  static WriteDescriptorRequest? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -804,13 +804,13 @@ class WriteDescriptorResponse extends $pb.GeneratedMessage {
   WriteDescriptorResponse.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   WriteDescriptorResponse.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   WriteDescriptorResponse clone() => new WriteDescriptorResponse()..mergeFromMessage(this);
-  WriteDescriptorResponse copyWith(void Function(WriteDescriptorResponse) updates) => super.copyWith((message) => updates(message as WriteDescriptorResponse));
+  WriteDescriptorResponse copyWith(void Function(WriteDescriptorResponse) updates) => super.copyWith((message) => updates(message as WriteDescriptorResponse)) as WriteDescriptorResponse;
   $pb.BuilderInfo get info_ => _i;
   static WriteDescriptorResponse create() => new WriteDescriptorResponse();
   WriteDescriptorResponse createEmptyInstance() => create();
   static $pb.PbList<WriteDescriptorResponse> createRepeated() => new $pb.PbList<WriteDescriptorResponse>();
   static WriteDescriptorResponse getDefault() => _defaultInstance ??= create()..freeze();
-  static WriteDescriptorResponse _defaultInstance;
+  static WriteDescriptorResponse? _defaultInstance;
 
   WriteDescriptorRequest get request => $_getN(0);
   set request(WriteDescriptorRequest v) { setField(1, v); }
@@ -837,13 +837,13 @@ class SetNotificationRequest extends $pb.GeneratedMessage {
   SetNotificationRequest.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   SetNotificationRequest.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SetNotificationRequest clone() => new SetNotificationRequest()..mergeFromMessage(this);
-  SetNotificationRequest copyWith(void Function(SetNotificationRequest) updates) => super.copyWith((message) => updates(message as SetNotificationRequest));
+  SetNotificationRequest copyWith(void Function(SetNotificationRequest) updates) => super.copyWith((message) => updates(message as SetNotificationRequest)) as SetNotificationRequest;
   $pb.BuilderInfo get info_ => _i;
   static SetNotificationRequest create() => new SetNotificationRequest();
   SetNotificationRequest createEmptyInstance() => create();
   static $pb.PbList<SetNotificationRequest> createRepeated() => new $pb.PbList<SetNotificationRequest>();
   static SetNotificationRequest getDefault() => _defaultInstance ??= create()..freeze();
-  static SetNotificationRequest _defaultInstance;
+  static SetNotificationRequest? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -883,13 +883,13 @@ class SetNotificationResponse extends $pb.GeneratedMessage {
   SetNotificationResponse.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   SetNotificationResponse.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   SetNotificationResponse clone() => new SetNotificationResponse()..mergeFromMessage(this);
-  SetNotificationResponse copyWith(void Function(SetNotificationResponse) updates) => super.copyWith((message) => updates(message as SetNotificationResponse));
+  SetNotificationResponse copyWith(void Function(SetNotificationResponse) updates) => super.copyWith((message) => updates(message as SetNotificationResponse)) as SetNotificationResponse;
   $pb.BuilderInfo get info_ => _i;
   static SetNotificationResponse create() => new SetNotificationResponse();
   SetNotificationResponse createEmptyInstance() => create();
   static $pb.PbList<SetNotificationResponse> createRepeated() => new $pb.PbList<SetNotificationResponse>();
   static SetNotificationResponse getDefault() => _defaultInstance ??= create()..freeze();
-  static SetNotificationResponse _defaultInstance;
+  static SetNotificationResponse? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -918,13 +918,13 @@ class OnNotificationResponse extends $pb.GeneratedMessage {
   OnNotificationResponse.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   OnNotificationResponse.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   OnNotificationResponse clone() => new OnNotificationResponse()..mergeFromMessage(this);
-  OnNotificationResponse copyWith(void Function(OnNotificationResponse) updates) => super.copyWith((message) => updates(message as OnNotificationResponse));
+  OnNotificationResponse copyWith(void Function(OnNotificationResponse) updates) => super.copyWith((message) => updates(message as OnNotificationResponse)) as OnNotificationResponse;
   $pb.BuilderInfo get info_ => _i;
   static OnNotificationResponse create() => new OnNotificationResponse();
   OnNotificationResponse createEmptyInstance() => create();
   static $pb.PbList<OnNotificationResponse> createRepeated() => new $pb.PbList<OnNotificationResponse>();
   static OnNotificationResponse getDefault() => _defaultInstance ??= create()..freeze();
-  static OnNotificationResponse _defaultInstance;
+  static OnNotificationResponse? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }
@@ -948,13 +948,13 @@ class DeviceStateResponse extends $pb.GeneratedMessage {
   DeviceStateResponse.fromBuffer(List<int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
   DeviceStateResponse.fromJson(String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
   DeviceStateResponse clone() => new DeviceStateResponse()..mergeFromMessage(this);
-  DeviceStateResponse copyWith(void Function(DeviceStateResponse) updates) => super.copyWith((message) => updates(message as DeviceStateResponse));
+  DeviceStateResponse copyWith(void Function(DeviceStateResponse) updates) => super.copyWith((message) => updates(message as DeviceStateResponse)) as DeviceStateResponse;
   $pb.BuilderInfo get info_ => _i;
   static DeviceStateResponse create() => new DeviceStateResponse();
   DeviceStateResponse createEmptyInstance() => create();
   static $pb.PbList<DeviceStateResponse> createRepeated() => new $pb.PbList<DeviceStateResponse>();
   static DeviceStateResponse getDefault() => _defaultInstance ??= create()..freeze();
-  static DeviceStateResponse _defaultInstance;
+  static DeviceStateResponse? _defaultInstance;
 
   String get remoteId => $_getS(0, '');
   set remoteId(String v) { $_setString(0, v); }

@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:bluetooth/bluetooth.dart';
+import 'package:flutter_blue/bluetooth.dart';
 
 class ScanResultTile extends StatelessWidget {
   const ScanResultTile({Key key, this.result, this.onTap}) : super(key: key);
@@ -87,6 +87,7 @@ class ScanResultTile extends StatelessWidget {
     return ExpansionTile(
       title: _buildTitle(context),
       leading: Text(result.rssi.toString()),
+      // ignore: deprecated_member_use
       trailing: RaisedButton(
         child: Text('CONNECT'),
         color: Colors.black,
@@ -134,11 +135,12 @@ class ServiceTile extends StatelessWidget {
           children: <Widget>[
             const Text('Service'),
             new Text(
-                '0x${service.uuid.toString().toUpperCase().substring(4, 8)}',
-                style: Theme.of(context)
-                    .textTheme
-                    .body1
-                    .copyWith(color: Theme.of(context).textTheme.caption.color))
+              '0x${service.uuid.toString().toUpperCase().substring(4, 8)}',
+              // style: Theme.of(context)
+              //     .textTheme
+              //     .body1
+              //     .copyWith(color: Theme.of(context).textTheme.caption.color),
+            )
           ],
         ),
         children: characteristicTiles,
@@ -201,11 +203,8 @@ class CharacteristicTile extends StatelessWidget {
       children: <Widget>[
         const Text('Characteristic'),
         new Text(
-            '0x${characteristic.id.uuid.toString().toUpperCase().substring(4, 8)}',
-            style: Theme.of(context)
-                .textTheme
-                .body1
-                .copyWith(color: Theme.of(context).textTheme.caption.color))
+          '0x${characteristic.id.uuid.toString().toUpperCase().substring(4, 8)}',
+        )
       ],
     );
 
@@ -246,11 +245,8 @@ class DescriptorTile extends StatelessWidget {
       children: <Widget>[
         const Text('Descriptor'),
         new Text(
-            '0x${descriptor.uuid.toString().toUpperCase().substring(4, 8)}',
-            style: Theme.of(context)
-                .textTheme
-                .body1
-                .copyWith(color: Theme.of(context).textTheme.caption.color))
+          '0x${descriptor.uuid.toString().toUpperCase().substring(4, 8)}',
+        )
       ],
     );
     return new ListTile(
