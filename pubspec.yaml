@@ -12,8 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  convert: '^2.1.1'
-  protobuf: '^0.13.4'
+  convert: "^2.1.1"
+  protobuf: "^2.0.1"
   uuid_enhanced: ^3.0.2
   collection: ^1.14.11
   meta: ^1.1.6
