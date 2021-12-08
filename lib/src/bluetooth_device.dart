@@ -131,9 +131,9 @@ class BluetoothDevice {
         .then((success) => (!success)
             ? throw new Exception('Failed to write the characteristic')
             : null)
-        .then(
-            ((_) => characteristic.value = value) as FutureOr<_> Function(Null))
-        .then(((_) => null) as FutureOr<Null> Function(dynamic));
+        .then(((_) => characteristic.value = value) as FutureOr<Null> Function(
+            Null))
+        .then(((_) => null));
   }
 
   /// Writes the value of a descriptor
@@ -163,8 +163,9 @@ class BluetoothDevice {
         .then((success) => (!success)
             ? throw new Exception('Failed to write the descriptor')
             : null)
-        .then(((_) => descriptor.value = value) as FutureOr<_> Function(Null))
-        .then(((_) => null) as FutureOr<Null> Function(dynamic));
+        .then(
+            ((_) => descriptor.value = value) as FutureOr<Null> Function(Null))
+        .then(((_) => null));
   }
 
   /// Sets notifications or indications for the value of a specified characteristic
